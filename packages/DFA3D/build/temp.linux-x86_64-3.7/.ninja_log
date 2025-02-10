@@ -1,0 +1,13 @@
+# ninja log v5
+0	20603	1737083649435291906	/data/home/caoh/projects/MA_Jiachen/CGFormer/packages/DFA3D/build/temp.linux-x86_64-3.7/dfa3D/ops/csrc/cuda/cudabind.o	f72a16e09699ecf2
+2	21182	1737083650015295724	/data/home/caoh/projects/MA_Jiachen/CGFormer/packages/DFA3D/build/temp.linux-x86_64-3.7/dfa3D/ops/csrc/ms_depth_score_sample.o	bc87c7091d08c349
+2	49671	1737084027337778416	/data/home/caoh/projects/MA_Jiachen/CGFormer/packages/DFA3D/build/temp.linux-x86_64-3.7/dfa3D/ops/csrc/cuda/cudabind.o	321b41d43b8a8001
+5	52073	1737084029713794045	/data/home/caoh/projects/MA_Jiachen/CGFormer/packages/DFA3D/build/temp.linux-x86_64-3.7/dfa3D/ops/csrc/ms_depth_score_sample.o	ccb98ed741bbae15
+2	58492	1737084036089835984	/data/home/caoh/projects/MA_Jiachen/CGFormer/packages/DFA3D/build/temp.linux-x86_64-3.7/dfa3D/ops/csrc/cuda/ms_depth_score_sample_cuda.o	4a663db8e7fa07aa
+3	64471	1737084042057875240	/data/home/caoh/projects/MA_Jiachen/CGFormer/packages/DFA3D/build/temp.linux-x86_64-3.7/dfa3D/ops/csrc/cuda/wms_deform_attn_cuda.o	5528037169a14d8
+52073	82905	1737084060569997003	/data/home/caoh/projects/MA_Jiachen/CGFormer/packages/DFA3D/build/temp.linux-x86_64-3.7/dfa3D/ops/csrc/wms_deform_attn.o	f520745a370a8f19
+49671	91297	1737084068954052148	/data/home/caoh/projects/MA_Jiachen/CGFormer/packages/DFA3D/build/temp.linux-x86_64-3.7/dfa3D/ops/csrc/pybind.o	dcba1b60a94e7119
+5	42266	1737085637580317534	/data/home/caoh/projects/MA_Jiachen/CGFormer/packages/DFA3D/build/temp.linux-x86_64-3.7/dfa3D/ops/csrc/cuda/cudabind.o	4a549b32dd73bbd2
+2	43176	1737085638544323847	/data/home/caoh/projects/MA_Jiachen/CGFormer/packages/DFA3D/build/temp.linux-x86_64-3.7/dfa3D/ops/csrc/ms_depth_score_sample.o	41ed4369e3253af7
+3	43284	1737085638692324817	/data/home/caoh/projects/MA_Jiachen/CGFormer/packages/DFA3D/build/temp.linux-x86_64-3.7/dfa3D/ops/csrc/wms_deform_attn.o	a5322872701be65c
+3	48823	1737085644268361336	/data/home/caoh/projects/MA_Jiachen/CGFormer/packages/DFA3D/build/temp.linux-x86_64-3.7/dfa3D/ops/csrc/pybind.o	1b2da4f85293c28a
