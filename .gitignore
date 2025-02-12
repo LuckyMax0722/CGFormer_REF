@@ -18,3 +18,8 @@ output/tensorboard/version_0/events.out.tfevents.1739038860.i6-gpu-1.4086736.0
 output/tensorboard/version_0/hparams.yaml
 output/tensorboard/version_1/events.out.tfevents.1739189361.i6-gpu-1.4186403.0
 output/tensorboard/version_1/hparams.yaml
+output/csv_logs/version_2/hparams.yaml
+output/csv_logs/version_2/metrics.csv
+output/tensorboard/CGFormer/events.out.tfevents.1707886866.kemove.658129.0
+output/tensorboard/version_2/events.out.tfevents.1739306619.i6-gpu-1.147972.0
+output/tensorboard/version_2/hparams.yaml

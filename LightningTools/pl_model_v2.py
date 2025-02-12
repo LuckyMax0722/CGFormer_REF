@@ -106,30 +106,18 @@ class pl_model(LightningBaseModel):
         
         metrics_list = metric_list
         
-        val_IoU = 0.0
-        val_mIoU = 0.0
-        count = 0
-    
-        print('======================')
         for prefix, metric in metrics_list:
             stats = metric.get_stats()
 
+            for name, iou in zip(self.class_names, stats['iou_ssc']):
+                print(name + ":", iou)
+                
             self.log("{}/mIoU".format(prefix), torch.tensor(stats["iou_ssc_mean"], dtype=torch.float32), sync_dist=True)
             self.log("{}/IoU".format(prefix), torch.tensor(stats["iou"], dtype=torch.float32), sync_dist=True)
             self.log("{}/Precision".format(prefix), torch.tensor(stats["precision"], dtype=torch.float32), sync_dist=True)
             self.log("{}/Recall".format(prefix), torch.tensor(stats["recall"], dtype=torch.float32), sync_dist=True)
             
-            if prefix == "val":
-                count = count + 1
-                val_IoU = val_IoU + torch.tensor(stats['iou'], dtype=torch.float32)
-                val_mIoU = val_mIoU + torch.tensor(stats['iou_ssc_mean'], dtype=torch.float32)
-
             metric.reset()
-        
-        print(f"val/IoU: {val_IoU*100:.2f}")
-        print(f"val/mIoU: {val_mIoU*100:.2f}")
-            
-        print('======================')
         
     def test_step(self, batch, batch_idx):
         output_dict = self.forward(batch)
