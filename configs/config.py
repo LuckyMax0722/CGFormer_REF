@@ -13,7 +13,7 @@ CONF.PATH.CONFIG_DIR = os.path.join(CONF.PATH.BASE, 'configs')
 CONF.PATH.CONFIG = os.path.join(CONF.PATH.CONFIG_DIR, 'CGFormer-Efficient-Swin-SemanticKITTI_v3.py')
 
 # log
-CONF.PATH.LOG_DIR = os.path.join(CONF.PATH.BASE, 'output')
+CONF.PATH.LOG_DIR = os.path.join(CONF.PATH.BASE, 'output_new_version')
 
 # ckpt
 CONF.PATH.CKPT_DIR = os.path.join(CONF.PATH.BASE, 'ckpts')

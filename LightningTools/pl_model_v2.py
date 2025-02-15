@@ -109,8 +109,9 @@ class pl_model(LightningBaseModel):
         for prefix, metric in metrics_list:
             stats = metric.get_stats()
 
-            for name, iou in zip(self.class_names, stats['iou_ssc']):
-                print(name + ":", iou)
+            if prefix == 'val':
+                for name, iou in zip(self.class_names, stats['iou_ssc']):
+                    self.log("{}/{}/IoU".format(prefix, name), torch.tensor(iou, dtype=torch.float32), sync_dist=True)
                 
             self.log("{}/mIoU".format(prefix), torch.tensor(stats["iou_ssc_mean"], dtype=torch.float32), sync_dist=True)
             self.log("{}/IoU".format(prefix), torch.tensor(stats["iou"], dtype=torch.float32), sync_dist=True)

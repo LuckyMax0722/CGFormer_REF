@@ -143,29 +143,6 @@ class Header(nn.Module): # mlp as perdition head
         
         return res
 
-class HeaderV2(nn.Module): # conv3d as perdition head
-    def __init__(
-        self,
-        geo_feat_channels,
-        class_num
-    ):
-        super(HeaderV2, self).__init__()
-        self.geo_feat_channels = geo_feat_channels
-        self.class_num = class_num
-        
-        self.output_head = nn.Sequential(
-            nn.Conv3d(self.geo_feat_channels, self.class_num, kernel_size=1, stride=1, padding=0, bias=False),
-        )
-
-    def forward(self, x):
-        # [1, 64, 256, 256, 32]
-        res = {} 
-
-        ssc_logit = self.output_head(x)
-        
-        res["ssc_logit"] = ssc_logit
-
-        return res
       
 class UNet(nn.Module):
     def __init__(self, 
@@ -239,7 +216,7 @@ class UNet(nn.Module):
 
         
 @HEADS.register_module()
-class RefHeadV2(nn.Module):
+class RefHeadV3(nn.Module):
     def __init__(
         self,
         num_class,
